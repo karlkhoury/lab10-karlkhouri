@@ -73,3 +73,59 @@ Application deployed to /var/jenkins_home/deployments/python-ci-cd
 [WS-CLEANUP] done
 Finished: SUCCESS
 ```
+
+## Screenshots
+
+### Part 1 - Jenkins Setup
+
+Jenkins dashboard with the `Python-CI-CD` job:
+
+![Dashboard](screenshots/01_dashboard.png)
+
+Installed plugins (Git, Pipeline, SSH Agent, Workspace Cleanup, Stage View):
+
+![Plugins](screenshots/02_plugins.png)
+
+### Part 3 - Job Configuration and Build #1
+
+Pipeline script from SCM, Git repository URL, branch `*/main`, Script Path `Jenkinsfile_Karl_Khouri`:
+
+![Job configuration](screenshots/03_job_config_pipeline_scm.png)
+
+Build #1 console - checkout from GitHub:
+
+![Build 1 start](screenshots/05_build1_console_start.png)
+
+Build #1 console - Test stage:
+
+![Build 1 test](screenshots/06_build1_test.png)
+
+Build #1 console - Deploy stage and `Finished: SUCCESS`:
+
+![Build 1 deploy](screenshots/07_build1_deploy_success.png)
+
+### Part 4 - Build #2
+
+Stage View showing all stages passing (Setup, Lint, Test, Coverage, Security Scan, Deploy):
+
+![Stage view](screenshots/04_stage_view.png)
+
+Build #2 console - checkout and Setup:
+
+![Build 2 start](screenshots/08_build2_console_start.png)
+
+Build #2 console - Test stage:
+
+![Build 2 test](screenshots/09_build2_test.png)
+
+Build #2 console - Coverage stage report:
+
+![Build 2 coverage](screenshots/10_build2_coverage.png)
+
+Build #2 console - Security Scan stage (bandit):
+
+![Build 2 security scan](screenshots/11_build2_security_scan.png)
+
+Build #2 console - Deploy stage and `Finished: SUCCESS`:
+
+![Build 2 deploy](screenshots/12_build2_deploy_success.png)
